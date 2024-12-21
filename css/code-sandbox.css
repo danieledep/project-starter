@@ -1,0 +1,319 @@
+/**
+ * @section General Code Styles
+ */
+
+code-sandbox {
+	width: 100%;
+
+	code,
+	kbd,
+	pre,
+	samp {
+		font-family: Menlo, Monaco, "Courier New", monospace;
+		font-size: 0.875em;
+	}
+
+	code {
+		color: #dd1144;
+		word-wrap: break-word;
+	}
+
+	pre {
+		background-color: #f7f7f7;
+		border: 0.0625rem solid #e5e5e5;
+		border-radius: 0.5em;
+		color: #272727;
+		display: block;
+		line-height: 1.5;
+		margin: 0 0 1.5em;
+		overflow: auto;
+		padding: 0.8125em;
+		tab-size: 2;
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+
+	@media (min-width: 38em) {
+		pre {
+			tab-size: 4;
+		}
+	}
+
+	pre code {
+		color: inherit;
+		font-size: 1em;
+	}
+
+	/**
+  * @section Code Sandbox
+  */
+
+	/**
+  * Wrapper element
+  */
+	.sandbox {
+		background-color: #f7f7f7;
+		color: #272727;
+		font-family: system-ui, sans-serif;
+		margin-bottom: 1.5em;
+	}
+
+	.sandbox button {
+		font: inherit;
+	}
+
+	.sandbox summary,
+	.sandbox .sandbox-label {
+		font-weight: bold;
+		font-size: 0.8125em;
+	}
+
+	/**
+  * Main content area
+  */
+
+	@media (min-width: 38em) {
+		.sandbox-content {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.sandbox-code {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+
+		.sandbox-result,
+		.sandbox-console-result {
+			grid-area: 1 / 2 / 2 / 3;
+		}
+	}
+
+	.sandbox-editor {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		column-gap: 0;
+		row-gap: 0;
+	}
+
+	.sandbox-text,
+	.sandbox-mirror {
+		grid-area: 1 / 1 / 2 / 2;
+		margin-bottom: 0;
+		min-height: 15em;
+	}
+
+	.sandbox-text {
+		background-color: transparent;
+		border: none;
+		color: transparent;
+		caret-color: #272727;
+		font: inherit;
+		font-family: Menlo, Monaco, "Courier New", monospace;
+		font-size: 0.875em;
+		height: unset;
+		line-height: 1.5;
+		overflow: hidden;
+		padding: 0.8125em;
+		resize: none;
+		tab-size: 2;
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+
+	@media (min-width: 38em) {
+		.sandbox-text {
+			tab-size: 4;
+		}
+	}
+
+	.sandbox-mirror {
+		border-color: transparent;
+	}
+
+	.sandbox-iframe {
+		aspect-ratio: auto;
+		background-color: #ffffff;
+		height: 100%;
+		width: 100%;
+		min-height: 15em;
+		margin-bottom: 0;
+	}
+
+	.sandbox-code details {
+		margin-left: 0;
+	}
+
+	.sandbox,
+	.sandbox-mirror,
+	.sandbox-text,
+	.sandbox-iframe {
+		border-radius: 0.25em;
+	}
+
+	/**
+  * Header & Console
+  */
+
+	.sandbox-header,
+	.sandbox-console {
+		padding-top: 0.125em;
+		padding-bottom: 0.125em;
+	}
+
+	.sandbox-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid #e5e5e5;
+		border-top-left-radius: 0.25em;
+		border-top-right-radius: 0.25em;
+	}
+
+	.sandbox-controls .btn {
+		font-size: 0.6875em;
+		margin-bottom: 0;
+	}
+
+	.sandbox-console {
+		border-bottom-left-radius: 0.25em;
+		border-bottom-right-radius: 0.25em;
+	}
+
+	@media (min-width: 38em) {
+		.sandbox-console-result {
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	.sandbox-console-log {
+		font-family: Menlo, Monaco, "Courier New", monospace;
+		font-size: 0.875em;
+		min-height: 1.2em;
+		white-space: pre-wrap;
+		tab-size: 2;
+	}
+
+	@media (min-width: 38em) {
+		.sandbox-console-log {
+			tab-size: 4;
+		}
+	}
+
+	.log-warn {
+		color: #f9d767;
+	}
+
+	.log-error {
+		color: #f9c8c8;
+	}
+
+	.sandbox-header,
+	.sandbox-code,
+	.sandbox-result,
+	.sandbox-console,
+	.sandbox-console-result {
+		padding: 0.5em;
+	}
+
+	/*
+  * Hide only visually, but have it available for screen readers:
+  * @link https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
+	.sandbox .screen-reader {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		white-space: nowrap; /* 1 */
+		width: 1px;
+	}
+
+	/* PrismJS 1.29.0 - https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+	/**
+  * prism.js default theme for JavaScript, CSS and HTML
+  * Based on dabblet (http://dabblet.com)
+  * @author Lea Verou
+  */
+
+	.sandbox-mirror .token.comment,
+	.sandbox-mirror .token.prolog,
+	.sandbox-mirror .token.doctype,
+	.sandbox-mirror .token.cdata {
+		color: slategray;
+	}
+
+	.sandbox-mirror .token.punctuation {
+		color: #999;
+	}
+
+	.sandbox-mirror .token.namespace {
+		opacity: 0.7;
+	}
+
+	.sandbox-mirror .token.property,
+	.sandbox-mirror .token.tag,
+	.sandbox-mirror .token.boolean,
+	.sandbox-mirror .token.number,
+	.sandbox-mirror .token.constant,
+	.sandbox-mirror .token.symbol,
+	.sandbox-mirror .token.deleted {
+		color: #905;
+	}
+
+	.sandbox-mirror .token.selector,
+	.sandbox-mirror .token.attr-name,
+	.sandbox-mirror .token.string,
+	.sandbox-mirror .token.char,
+	.sandbox-mirror .token.builtin,
+	.sandbox-mirror .token.inserted {
+		color: #690;
+	}
+
+	.sandbox-mirror .token.operator,
+	.sandbox-mirror .token.entity,
+	.sandbox-mirror .token.url,
+	.sandbox-mirror .language-css .token.string,
+	.sandbox-mirror .style .token.string {
+		color: #9a6e3a;
+		/* This background color was intended by the author of this theme. */
+		background: hsla(0, 0%, 100%, 0.5);
+	}
+
+	.sandbox-mirror .token.atrule,
+	.sandbox-mirror .token.attr-value,
+	.sandbox-mirror .token.keyword {
+		color: #07a;
+	}
+
+	.sandbox-mirror .token.function,
+	.sandbox-mirror .token.class-name {
+		color: #dd4a68;
+	}
+
+	.sandbox-mirror .token.regex,
+	.sandbox-mirror .token.important,
+	.sandbox-mirror .token.variable {
+		color: #e90;
+	}
+
+	.sandbox-mirror .token.important,
+	.sandbox-mirror .token.bold {
+		font-weight: bold;
+	}
+
+	.sandbox-mirror .token.italic {
+		font-style: italic;
+	}
+
+	.sandbox-mirror .token.entity {
+		cursor: help;
+	}
+}

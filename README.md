@@ -34,6 +34,7 @@ npx vite
 - Tweakpane
 - PrismJS
 - md-block
+- Code sandbox
 - Tailwind CSS
 
 ### Resources
@@ -41,4 +42,5 @@ npx vite
 - [@celine/celine](https://maxbo.me/celine/)
 - [MaxwellBo/celine](https://github.com/MaxwellBo/celine)
 - [leaverou/md-block](https://github.com/leaverou/md-block)
+- [cferdinandi/code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07)
 - [mattdesl/canvas-sketch](https://github.com/mattdesl/canvas-sketch)

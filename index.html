@@ -10,6 +10,8 @@
   <link href="css/main.css" rel="stylesheet">
   <!-- Prism CSS -->
   <link href="css/prism-one-dark.css" rel="stylesheet">
+  <!-- Code sandbox CSS -->
+  <link href="css/code-sandbox.css" rel="stylesheet">
   <!-- Markdown CSS -->
   <link href="css/markdown.css" rel="stylesheet">
   <!-- Tailwind CDN Script -->
@@ -19,13 +21,20 @@
 <body class="container flex flex-col items-center justify-center min-h-screen bg-gray-100 mx-auto">
   <counter-display></counter-display>
   <counter-button></counter-button>
+
   <md-block src="md/demo.md">
     `md/demo.md` was *not* found
   </md-block>
+
   <md-block src="README.md">
     `README.md` was *not* found
   </md-block>
-  <embedded-webview src="css/markdown.css"></embedded-webview>
+
+  <code-sandbox console hidden>
+    <textarea for="html"><!-- ... --></textarea>
+    <textarea for="css" src="css/markdown.css">/* ... */</textarea>
+    <textarea for="js" open>// ...</textarea>
+  </code-sandbox>
 
   <!-- Include scripts -->
   <script type="module">
@@ -34,6 +43,7 @@
     import '/js/counter-button.js';
     import '/js/md-block.js';
     import '/js/tweakpane.js';
+    import '/js/code-sandbox.js';
   </script>
 </body>
 
