@@ -1,146 +1,144 @@
 /* Basic CSS for Markdown-rendered content */
-
-/* Container for the Markdown content */
-mb-block {
+md-block {
 	line-height: 1.6;
 	color: #333;
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
-}
 
-/* Headings */
-mb-block h1,
-mb-block h2,
-mb-block h3,
-mb-block h4,
-mb-block h5,
-mb-block h6 {
-	margin-top: 1.5em;
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
+	/* Headings */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+		font-weight: bold;
+	}
 
-mb-block h1 {
-	font-size: 2em;
-}
+	h1 {
+		font-size: 2em;
+	}
 
-mb-block h2 {
-	font-size: 1.75em;
-}
+	h2 {
+		font-size: 1.75em;
+	}
 
-mb-block h3 {
-	font-size: 1.5em;
-}
+	h3 {
+		font-size: 1.5em;
+	}
 
-mb-block h4 {
-	font-size: 1.25em;
-}
+	h4 {
+		font-size: 1.25em;
+	}
 
-mb-block h5 {
-	font-size: 1em;
-}
+	h5 {
+		font-size: 1em;
+	}
 
-mb-block h6 {
-	font-size: 0.875em;
-}
+	h6 {
+		font-size: 0.875em;
+	}
 
-/* Paragraphs */
-mb-block p {
-	margin: 1em 0;
-}
+	/* Paragraphs */
+	p {
+		margin: 1em 0;
+	}
 
-/* Links */
-mb-block a {
-	color: #0066cc;
-	text-decoration: none;
-}
+	/* Links */
+	a {
+		color: #0066cc;
+		text-decoration: none;
+	}
 
-mb-block a:hover {
-	text-decoration: underline;
-}
+	a:hover {
+		text-decoration: underline;
+	}
 
-/* Lists */
-mb-block ul,
-mb-block ol {
-	margin: 1em 0;
-	padding-left: 2em;
-}
+	/* Lists */
+	ul,
+	ol {
+		margin: 1em 0;
+		padding-left: 2em;
+	}
 
-mb-block li {
-	margin-bottom: 0.5em;
-}
+	li {
+		margin-bottom: 0.5em;
+	}
 
-/* Blockquotes */
-mb-block blockquote {
-	margin: 1.5em 0;
-	padding: 0.5em 1em;
-	border-left: 4px solid #ccc;
-	background-color: #f9f9f9;
-}
+	/* Blockquotes */
+	blockquote {
+		margin: 1.5em 0;
+		padding: 0.5em 1em;
+		border-left: 4px solid #ccc;
+		background-color: #f9f9f9;
+	}
 
-mb-block blockquote p {
-	margin: 0;
-}
+	blockquote p {
+		margin: 0;
+	}
 
-/* Code blocks */
-mb-block pre {
-	background-color: #f5f5f5;
-	padding: 1em;
-	overflow: auto;
-	border-radius: 4px;
-}
+	/* Code blocks */
+	pre {
+		background-color: #f5f5f5;
+		padding: 1em;
+		overflow: auto;
+		border-radius: 4px;
+	}
 
-mb-block code {
-	background-color: #f5f5f5;
-	padding: 0.2em 0.4em;
-	font-family: monospace;
-	font-size: 0.95em;
-	border-radius: 4px;
-}
+	code {
+		background-color: #f5f5f5;
+		padding: 0.2em 0.4em;
+		font-family: monospace;
+		font-size: 0.95em;
+		border-radius: 4px;
+	}
 
-/* Horizontal Rule */
-mb-block hr {
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 2em 0;
-}
+	/* Horizontal Rule */
+	hr {
+		border: 0;
+		border-top: 1px solid #ccc;
+		margin: 2em 0;
+	}
 
-/* Images */
-mb-block img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	margin: 1em 0;
-}
+	/* Images */
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 1em 0;
+	}
 
-/* Tables */
-mb-block table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 1em 0;
-}
+	/* Tables */
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1em 0;
+	}
 
-mb-block th,
-mb-block td {
-	border: 1px solid #ddd;
-	padding: 0.5em 1em;
-}
+	th,
+	td {
+		border: 1px solid #ddd;
+		padding: 0.5em 1em;
+	}
 
-mb-block th {
-	background-color: #f2f2f2;
-	text-align: left;
-}
+	th {
+		background-color: #f2f2f2;
+		text-align: left;
+	}
 
-/* Inline HTML elements */
-mb-block strong {
-	font-weight: bold;
-}
+	/* Inline HTML elements */
+	strong {
+		font-weight: bold;
+	}
 
-mb-block em {
-	font-style: italic;
-}
+	em {
+		font-style: italic;
+	}
 
-mb-block del {
-	text-decoration: line-through;
+	del {
+		text-decoration: line-through;
+	}
 }
