@@ -173,7 +173,7 @@ customElements.define(
 
 		/**
 		 * Create the editor element HTML
-		 * @todo don't collapse if there's only one content type
+		 * Don't collapse if there's only one content type
 		 * @param  {String}  type The type of code editor
 		 * @param  {Element} elem The template element
 		 * @return {string}       The HTML string
