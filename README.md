@@ -11,6 +11,24 @@ A starter template for projects that doesn't make you worry about maintaining de
 - Tailwind CSS for styling
 - Web components for modularity
 
+## Setup build tools
+
+This starter template is meant to leverage native ES modules import and web components. Therefore it is possible to start working without any build tools.
+
+However, if you need to use build tools, add npm-installed dependencies, add hot-reloading, etc, Vite is the recommended build tool.
+
+Install Vite
+
+```bash
+npm install -D vite
+```
+
+Run Vite
+
+```bash
+npx vite
+```
+
 ## Libraries
 
 - Tweakpane
