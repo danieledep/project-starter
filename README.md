@@ -40,5 +40,5 @@ npx vite
 
 - [@celine/celine](https://maxbo.me/celine/)
 - [MaxwellBo/celine](https://github.com/MaxwellBo/celine)
-  [leaverou/md-block](https://github.com/leaverou/md-block)
+- [leaverou/md-block](https://github.com/leaverou/md-block)
 - [mattdesl/canvas-sketch](https://github.com/mattdesl/canvas-sketch)
