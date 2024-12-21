@@ -1,12 +1,13 @@
 # project-starter
 
-A starter template for projects that doesn't make you worry about maintaining dependencies and frameworks. It uses modern JavaScript features and Web Components. Each component or functionality is a separate file that can be imported if needed or commented out if not.
+A starter template for projects that doesn't make you worry about maintaining dependencies and frameworks on the long run. It uses modern JavaScript features and Web Components. Each component or functionality is a separate file that can be imported if needed or commented out if not.
 
 ## Features
 
 - Tweakpane for GUI controls
 - PrismJS for code highlighting
 - md-block for including markdown files
+- A fork of Code sandbox web component from [Chris Ferdinandi](https://github.com/cferdinandi) for running code snippets. My fork adds the possibility to fetch a file from a URL and run it in the sandbox, by just adding an attribute `src="css/component.css"`. My idea is to use this to keep the code snippets in a separate file and include them on page load. 
 - Basic custom Reactive State Management Using Proxy, storing values in Local storage and syncing to Tweakpane
 - Tailwind CSS for styling
 - Web components for modularity

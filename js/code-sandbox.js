@@ -180,20 +180,26 @@ customElements.define(
 		 */
 		createEditor(type, elem) {
 			if (this[type] === false) return "";
+			const contentTypes = Object.keys(this).filter(
+				(key) => this[key] !== false && ["html", "css", "js"].includes(key)
+			);
+			const isSingleContentType = contentTypes.length === 1;
 			return `
-			<details ${elem && elem.hasAttribute("open") ? "open" : ""}>
-				<summary>${type.toUpperCase()}</summary>
-				<label for="sandbox-${type}-${
+			<details ${
+				(elem && elem.hasAttribute("open")) || isSingleContentType ? "open" : ""
+			}>
+					<summary>${type.toUpperCase()}</summary>
+					<label for="sandbox-${type}-${
 				this.uuid
 			}" class="screen-reader">${type.toUpperCase()}</label>
-				<div class="sandbox-editor">
-					<pre class="sandbox-mirror"><code id="sandbox-${type}-mirror-${
+					<div class="sandbox-editor">
+							<pre class="sandbox-mirror"><code id="sandbox-${type}-mirror-${
 				this.uuid
 			}" class="lang-${type}"></code></pre>
-					<textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" class="sandbox-text" id="sandbox-${type}-${
+							<textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" class="sandbox-text" id="sandbox-${type}-${
 				this.uuid
 			}"></textarea>
-				</div>
+					</div>
 			</details>`;
 		}
 
