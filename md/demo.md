@@ -11,3 +11,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur [Google]
 ```js
 console.log("Hello World");
 ```
+
+<code-sandbox>
+
+```js
+console.log("Hello component");
+```
+</code-sandbox>

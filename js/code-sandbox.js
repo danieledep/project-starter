@@ -12,8 +12,25 @@ customElements.define(
 			let intro = this.querySelector('[for="intro"]');
 			let collapse = this.hasAttribute("collapse");
 			let html = this.querySelector('textarea[for="html"]');
+			if (!html && this.querySelector('pre[class="language-html"]')) {
+				html = document.createElement("textarea");
+				html.setAttribute("for", "html");
+				html.value = this.querySelector(
+					'pre[class="language-html"]'
+				).textContent;
+			}
 			let css = this.querySelector('textarea[for="css"]');
+			if (!css && this.querySelector('pre[class="language-css"]')) {
+				css = document.createElement("textarea");
+				css.setAttribute("for", "css");
+				css.value = this.querySelector('pre[class="language-css"]').textContent;
+			}
 			let js = this.querySelector('textarea[for="js"]');
+			if (!js && this.querySelector('pre[class="language-js"]')) {
+				js = document.createElement("textarea");
+				js.setAttribute("for", "js");
+				js.value = this.querySelector('pre[class="language-js"]').textContent;
+			}
 
 			(async () => {
 				this.html = await this.fetchContent(html, !!html ? html.value : false);
