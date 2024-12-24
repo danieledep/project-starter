@@ -8,6 +8,7 @@ A starter template for projects that doesn't make you worry about maintaining de
 - [PrismJS](https://prismjs.com/) for code highlighting
 - [md-block](https://github.com/leaverou/md-block) for importing and rendering markdown files on the client side using web components
 - Basic custom Reactive State Management Using Proxy, storing values in Local storage and two-way data-binding with Tweakpane
+- Automatic light/dark mode based on system preferences
 - [Tailwind Play CDN](https://tailwindcss.com/docs/installation/play-cdn) for styling
 - Web components for modularity
 - A fork of [code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07) web component from Chris Ferdinandi for displaying an interactive code sandbox for html, css and javascript, similar to what CodePen does. My fork adds the possibility to fetch a file from a URL and run it in the sandbox, by just adding an attribute `src="css/component.css"` to the web component. My idea is to use this to keep the code snippets in a separate file and include them on page load. This way, the code snippets can be updated without changing the main page.
