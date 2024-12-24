@@ -27,7 +27,7 @@ code-sandbox {
 		line-height: 1.5;
 		margin: 0 !important;
 		overflow: auto;
-		padding: 0.8125em;
+		padding: 0.8125em !important;
 		tab-size: 2;
 		white-space: pre-wrap;
 		word-break: break-all;
