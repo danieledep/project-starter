@@ -4,6 +4,7 @@ A starter template for projects that doesn't make you worry about maintaining de
 
 ## Todo
 
+- [ ] Add skip link
 - [ ] Resolve CSS conflicts between code-sandbox.css, md-block.css and prism-one-dark.css, with CSS [@layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer)
 
 ## Features

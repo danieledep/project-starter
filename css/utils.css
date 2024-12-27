@@ -1,3 +1,84 @@
-[hidden] {
-	display: none;
+@layer base {
+	[hidden] {
+		display: none;
+	}
+
+	[id] {
+		scroll-margin-top: var(--scroll-top, 2rem);
+	}
+
+	:focus:not(:focus-visible),
+	:focus:not(:focus-within) {
+		outline: none !important;
+	}
+
+	:focus-visible {
+		outline-width: 3px;
+		outline-offset: 0px;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+}
+
+.skip-link {
+	position: absolute;
+	left: 50%;
+	z-index: 20;
+	transform: translateX(-50%);
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 8px;
+	padding: 12px 8px;
+
+	&:not(:focus) {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+}
+
+@layer components {
+	.box-link::before {
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.box-link:focus-visible {
+		outline: 0;
+		&::before {
+			outline-width: 3px;
+			outline-offset: 0px;
+		}
+	}
 }

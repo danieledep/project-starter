@@ -20,27 +20,30 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="container flex flex-col items-center justify-center min-h-screen mx-auto">
-  <counter-display></counter-display>
-  <counter-button></counter-button>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main class="container flex flex-col items-center justify-center min-h-screen mx-auto">
+    <counter-display></counter-display>
+    <counter-button></counter-button>
 
-  <md-block src="md/demo.md">
-    `md/demo.md` was *not* found
-  </md-block>
+    <md-block src="md/demo.md">
+      `md/demo.md` was *not* found
+    </md-block>
 
-  <md-block src="README.md">
-    `README.md` was *not* found
-  </md-block>
+    <md-block src="README.md">
+      `README.md` was *not* found
+    </md-block>
 
-  <code-sandbox console hidden>
-    <textarea for="html"><!-- ... --></textarea>
-    <textarea for="css" src="css/markdown.css">/* ... */</textarea>
-    <textarea for="js" open>// ...</textarea>
-  </code-sandbox>
+    <code-sandbox console hidden>
+      <textarea for="html"><!-- ... --></textarea>
+      <textarea for="css" src="css/markdown.css">/* ... */</textarea>
+      <textarea for="js" open>// ...</textarea>
+    </code-sandbox>
 
-  <code-sandbox console hidden>
-    <textarea for="html"><!-- ... --></textarea>
-  </code-sandbox>
+    <code-sandbox console hidden>
+      <textarea for="html"><!-- ... --></textarea>
+    </code-sandbox>
+  </main>
 
   <!-- Include scripts -->
   <script type="module">
