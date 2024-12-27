@@ -3,6 +3,10 @@
 		display: none;
 	}
 
+	[disabled] {
+		pointer-events: none;
+	}
+
 	[id] {
 		scroll-margin-top: var(--scroll-top, 2rem);
 	}
@@ -79,6 +83,13 @@
 		&::before {
 			outline-width: 3px;
 			outline-offset: 0px;
+		}
+	}
+
+	.scroll-hide {
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
 		}
 	}
 }
