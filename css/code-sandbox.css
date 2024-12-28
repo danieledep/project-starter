@@ -5,45 +5,6 @@
 code-sandbox {
 	width: 100%;
 
-	code,
-	kbd,
-	pre,
-	samp {
-		font-family: Menlo, Monaco, "Courier New", monospace;
-		font-size: 0.875em;
-	}
-
-	code {
-		color: #dd1144;
-		word-wrap: break-word;
-	}
-
-	pre {
-		background-color: #f7f7f7;
-		border: 0.0625rem solid #e5e5e5;
-		border-radius: 0.5em;
-		color: #272727;
-		display: block;
-		line-height: 1.5;
-		margin: 0 !important;
-		overflow: auto;
-		padding: 0.8125em !important;
-		tab-size: 2;
-		white-space: pre-wrap;
-		word-break: break-all;
-	}
-
-	@media (min-width: 38em) {
-		pre {
-			tab-size: 4;
-		}
-	}
-
-	pre code {
-		color: inherit;
-		font-size: 1em;
-	}
-
 	/**
   * @section Code Sandbox
   */
@@ -104,28 +65,48 @@ code-sandbox {
 		min-height: 15em;
 	}
 
-	.sandbox-text {
-		background-color: transparent;
+	.sandbox-text,
+	.sandbox-mirror {
 		border: none;
-		color: transparent;
-		caret-color: #272727;
+		caret-color: #f7f7f7;
 		font: inherit;
 		font-family: Menlo, Monaco, "Courier New", monospace;
 		font-size: 0.875em;
 		height: unset;
 		line-height: 1.5;
 		overflow: hidden;
+		margin: 0;
 		padding: 0.8125em;
 		resize: none;
 		tab-size: 2;
 		white-space: pre-wrap;
 		word-break: break-all;
+		word-wrap: break-word;
+	}
+
+	.sandbox-mirror code {
+		display: inline-block;
+		padding: 0;
+		font-size: 1em;
+		letter-spacing: -0.0125em;
+		width: 100%;
+		tab-size: 2;
+		white-space: pre-wrap;
+		word-break: break-all;
+		word-wrap: break-word;
 	}
 
 	@media (min-width: 38em) {
-		.sandbox-text {
+		.sandbox-text,
+		.sandbox-mirror,
+		.sandbox-mirror code {
 			tab-size: 4;
 		}
+	}
+
+	.sandbox-text {
+		color: transparent;
+		background-color: transparent;
 	}
 
 	.sandbox-mirror {

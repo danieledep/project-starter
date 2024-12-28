@@ -2,10 +2,6 @@
 
 A starter template for projects that doesn't make you worry about maintaining dependencies and frameworks on the long run. It uses modern JavaScript features and Web Components. Each component or functionality is a separate file that can be imported if needed or commented out if not. All external dependencies are included from CDN links.
 
-## Todo
-
-- [ ] Resolve CSS conflicts between code-sandbox.css, md-block.css and prism-one-dark.css, with CSS [@layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer)
-
 ## Features
 
 - [Tweakpane](https://github.com/cocopon/tweakpane) for GUI controls
