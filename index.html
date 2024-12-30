@@ -6,7 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project starter</title>
-  <base href="/project-starter/">
+  <base href="/project-starter/"> <!-- This is for hosting on Github pages -->
+
   <!-- Main CSS -->
   <link href="css/main.css" rel="stylesheet">
   <!-- Utils CSS -->
@@ -47,14 +48,12 @@
   </main>
 
   <!-- Include scripts -->
-  <script type="module">
-    import './js/state.js';
-    import './js/counter-display.js';
-    import './js/counter-button.js';
-    import './js/md-block.js';
-    import './js/tweakpane.js';
-    import './js/code-sandbox.js';
-  </script>
+  <script type="module" src="/js/state.js"></script>
+  <script type="module" src="/js/counter-display.js"></script>
+  <script type="module" src="/js/counter-button.js"></script>
+  <script type="module" src="/js/md-block.js"></script>
+  <script type="module" src="/js/tweakpane.js"></script>
+  <script type="module" src="/js/code-sandbox.js"></script>
 </body>
 
 </html>
