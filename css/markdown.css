@@ -5,48 +5,48 @@ md-block {
 	margin-bottom: 1.5em;
 
 	/* Headings */
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
 		margin-top: 1.5em;
 		margin-bottom: 0.5em;
 		font-weight: bold;
 	}
 
-	h1 {
+	& h1 {
 		font-size: 2em;
 	}
 
-	h2 {
+	& h2 {
 		font-size: 1.75em;
 	}
 
-	h3 {
+	& h3 {
 		font-size: 1.5em;
 	}
 
-	h4 {
+	& h4 {
 		font-size: 1.25em;
 	}
 
-	h5 {
+	& h5 {
 		font-size: 1em;
 	}
 
-	h6 {
+	& h6 {
 		font-size: 0.875em;
 	}
 
 	/* Paragraphs */
-	p {
+	& p {
 		margin: 1em 0;
 	}
 
 	/* Links */
-	a {
+	& a {
 		color: #0080ff;
 		text-decoration: none;
 	}
@@ -56,45 +56,45 @@ md-block {
 	}
 
 	/* Lists */
-	ul,
-	ol {
+	& ul,
+	& ol {
 		margin: 1em 0;
 		padding-left: 2em;
 	}
 
-	ul li {
+	& ul li {
 		list-style-type: disc;
 	}
 
-	ol li {
+	& ol li {
 		list-style-type: decimal;
 	}
 
-	li {
+	& li {
 		margin-bottom: 0.5em;
 	}
 
 	/* Blockquotes */
-	blockquote {
+	& blockquote {
 		margin: 1.5em 0;
 		padding: 0.5em 1em;
 		border-left: 4px solid #ccc;
 		background-color: #f9f9f9;
 	}
 
-	blockquote p {
+	& blockquote p {
 		margin: 0;
 	}
 
 	/* Code blocks */
-	pre {
+	& pre {
 		background-color: light-dark(#d8d8d8, #282c34);
 		padding: 1em;
 		overflow: auto;
 		border-radius: 4px;
 	}
 
-	code {
+	& code {
 		background-color: light-dark(#d8d8d8, #282c34);
 		padding: 0.2em 0.4em;
 		font-family: monospace;
@@ -103,14 +103,14 @@ md-block {
 	}
 
 	/* Horizontal Rule */
-	hr {
+	& hr {
 		border: 0;
 		border-top: 1px solid #ccc;
 		margin: 2em 0;
 	}
 
 	/* Images */
-	img {
+	& img {
 		max-width: 100%;
 		height: auto;
 		display: block;
@@ -118,33 +118,33 @@ md-block {
 	}
 
 	/* Tables */
-	table {
+	& table {
 		width: 100%;
 		border-collapse: collapse;
 		margin: 1em 0;
 	}
 
-	th,
-	td {
+	& th,
+	& td {
 		border: 1px solid #ddd;
 		padding: 0.5em 1em;
 	}
 
-	th {
+	& th {
 		background-color: #f2f2f2;
 		text-align: left;
 	}
 
 	/* Inline HTML elements */
-	strong {
+	& strong {
 		font-weight: bold;
 	}
 
-	em {
+	& em {
 		font-style: italic;
 	}
 
-	del {
+	& del {
 		text-decoration: line-through;
 	}
 }
