@@ -1,5 +1,3 @@
-import "/js/prism.js";
-
 customElements.define(
 	"code-sandbox",
 	class extends HTMLElement {

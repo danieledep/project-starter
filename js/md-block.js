@@ -1,4 +1,3 @@
-import "/js/prism.js";
 import {
 	MarkdownBlock,
 	MarkdownSpan,
