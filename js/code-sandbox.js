@@ -202,6 +202,10 @@ customElements.define(
 			return `
 			<details ${
 				(elem && elem.hasAttribute("open")) || isSingleContentType ? "open" : ""
+			} ${
+				this && this.hasAttribute("name")
+					? `name="${this.getAttribute("name")}"`
+					: ""
 			}>
 					<summary>${type.toUpperCase()}</summary>
 					<label for="sandbox-${type}-${
@@ -266,7 +270,9 @@ customElements.define(
 				this.jsElem.value = this.js;
 				this.mirrorContent(this.jsElem);
 			}
-			this.updateIframe();
+			this.debounce = setTimeout(() => {
+				this.updateIframe();
+			}, 1000);
 		}
 
 		/**

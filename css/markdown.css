@@ -1,4 +1,6 @@
 /* Basic CSS for Markdown-rendered content */
+/* initial & in CSS Nesting is required until Safari iOS < 17.1 is supported */
+
 md-block {
 	display: block;
 	width: 100%;
@@ -83,7 +85,7 @@ md-block {
 		margin: 1.5em 0;
 		padding: 0.5em 1em;
 		border-left: 4px solid #ccc;
-		background-color: #f9f9f9;
+		background-color: light-dark(#f8f8f8, #282c34);
 	}
 
 	& blockquote p {
@@ -135,7 +137,7 @@ md-block {
 	}
 
 	& th {
-		background-color: #f2f2f2;
+		background-color: light-dark(#f8f8f8, #282c34);
 		text-align: left;
 	}
 

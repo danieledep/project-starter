@@ -11,7 +11,12 @@ A starter template for projects that doesn't make you worry about maintaining de
 - Automatic light/dark mode based on system preferences
 - [Tailwind Play CDN](https://tailwindcss.com/docs/installation/play-cdn) for styling
 - Web components for modularity
-- A fork of [code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07) web component from Chris Ferdinandi for displaying an interactive code sandbox for html, css and javascript, similar to what CodePen does. My fork adds the possibility to fetch a file from a URL and run it in the sandbox, by just adding an attribute `src="css/component.css"` to the web component. My idea is to use this to keep the code snippets in a separate file and include them on page load. This way, the code snippets can be updated without changing the main page.
+- A fork of [code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07) web component from Chris Ferdinandi for displaying an interactive code sandbox for html, css and javascript, similar to what CodePen does. My fork adds the possibility to fetch a file from a URL and run it in the sandbox, by just adding an attribute `src="css/component.css"` to the web component. My idea is to use this to keep the code snippets in a separate file and include them on page load. This way, the code snippets can be updated without changing the main page. I've also added a `name` attribute to the web component, which makes only one open at the time, similar to the &lt;details&gt; element.
+
+| Attribute | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| `name`    | The name attribute to be attached to the &lt;details&gt; elements, which makes only one open at the time (Optional) |
+| `src`     | The URL of the file to fetch and run in the sandbox. Can be on the same origin or a remote file (Optional)          |
 
 ## Setup build tools
 

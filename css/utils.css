@@ -32,6 +32,12 @@
 		font-synthesis: none;
 	}
 
+	button {
+		cursor: pointer;
+		touch-action: manipulation; /* remove delay on touch devices */
+		user-select: none; /* prevents text selection */
+	}
+
 	.container {
 		margin-left: auto;
 		margin-right: auto;
