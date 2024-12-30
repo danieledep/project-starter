@@ -3,8 +3,8 @@
  */
 
 code-sandbox {
+	display: block;
 	width: 100%;
-
 	/**
   * @section Code Sandbox
   */
@@ -13,6 +13,8 @@ code-sandbox {
   * Wrapper element
   */
 	.sandbox {
+		display: block;
+		width: 100%;
 		background-color: #f7f7f7;
 		color: #272727;
 		font-family: system-ui, sans-serif;
@@ -66,7 +68,8 @@ code-sandbox {
 	}
 
 	.sandbox-text,
-	.sandbox-mirror {
+	.sandbox-mirror,
+	.sandbox-console-log {
 		border: none;
 		caret-color: #f7f7f7;
 		font: inherit;
@@ -96,10 +99,20 @@ code-sandbox {
 		word-wrap: break-word;
 	}
 
+	.sandbox-console-log {
+		background: hsl(220, 13%, 18%);
+		color: hsl(220, 14%, 71%);
+		text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+		min-height: calc((1em * 1.5) + 1.625em);
+		white-space: pre-wrap;
+		tab-size: 2;
+	}
+
 	@media (min-width: 38em) {
 		.sandbox-text,
 		.sandbox-mirror,
-		.sandbox-mirror code {
+		.sandbox-mirror code,
+		.sandbox-console-log {
 			tab-size: 4;
 		}
 	}
@@ -129,7 +142,8 @@ code-sandbox {
 	.sandbox,
 	.sandbox-mirror,
 	.sandbox-text,
-	.sandbox-iframe {
+	.sandbox-iframe,
+	.sandbox-console-log {
 		border-radius: 0.25em;
 	}
 
@@ -165,20 +179,6 @@ code-sandbox {
 	@media (min-width: 38em) {
 		.sandbox-console-result {
 			border-bottom-left-radius: 0;
-		}
-	}
-
-	.sandbox-console-log {
-		font-family: Menlo, Monaco, "Courier New", monospace;
-		font-size: 0.875em;
-		min-height: 1.2em;
-		white-space: pre-wrap;
-		tab-size: 2;
-	}
-
-	@media (min-width: 38em) {
-		.sandbox-console-log {
-			tab-size: 4;
 		}
 	}
 
