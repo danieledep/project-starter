@@ -232,6 +232,29 @@ code-sandbox {
 	}
 
 	/*
+  * Dark mode fallback for browsers that do not support light-dark()
+  */
+	@supports not (light-dark(#272727, #f7f7f7)) {
+		.sandbox,
+		.sandbox .sandbox-btn,
+		.sandbox-header,
+		& details,
+		.sandbox-console-result .sandbox-console-log {
+			border-color: #ddd;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.sandbox,
+			.sandbox .sandbox-btn,
+			.sandbox-header,
+			& details,
+			.sandbox-console-result .sandbox-console-log {
+				border-color: #6b6b6b;
+			}
+		}
+	}
+
+	/*
   * Hide only visually, but have it available for screen readers:
   * @link https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
   *
