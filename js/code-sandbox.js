@@ -50,10 +50,10 @@ customElements.define(
 				<div class="sandbox-header">
 					<strong class="sandbox-label">Code Sandbox</strong>
 					<span class="sandbox-controls">
-						<button class="btn btn-muted btn-small" data-click="reset">Reload</button>
+						<button class="sandbox-btn" data-click="reset">Reload</button>
 						${
 							this.console || this.result === "console"
-								? `<button class="btn btn-muted btn-small" data-click="clear">Clear Console</button>`
+								? `<button class="sandbox-btn" data-click="clear">Clear Console</button>`
 								: ""
 						}
 					</span>
