@@ -6,9 +6,9 @@ customElements.define(
 			// Always call super first in constructor
 			super();
 
+			this.uuid = crypto.randomUUID();
+
 			// Get the code elements
-			let intro = this.querySelector('[for="intro"]');
-			let collapse = this.hasAttribute("collapse");
 			let html = this.querySelector('textarea[for="html"]');
 			if (!html && this.querySelector('pre[class="language-html"]')) {
 				html = document.createElement("textarea");
@@ -17,17 +17,32 @@ customElements.define(
 					'pre[class="language-html"]'
 				).textContent;
 			}
+
 			let css = this.querySelector('textarea[for="css"]');
 			if (!css && this.querySelector('pre[class="language-css"]')) {
 				css = document.createElement("textarea");
 				css.setAttribute("for", "css");
 				css.value = this.querySelector('pre[class="language-css"]').textContent;
 			}
+
 			let js = this.querySelector('textarea[for="js"]');
 			if (!js && this.querySelector('pre[class="language-js"]')) {
 				js = document.createElement("textarea");
 				js.setAttribute("for", "js");
 				js.value = this.querySelector('pre[class="language-js"]').textContent;
+			}
+
+			// Create empty editors only if no content exists for any type
+			if (!html && !css && !js) {
+				html = document.createElement("textarea");
+				html.setAttribute("for", "html");
+				html.value = "";
+				css = document.createElement("textarea");
+				css.setAttribute("for", "css");
+				css.value = "";
+				js = document.createElement("textarea");
+				js.setAttribute("for", "js");
+				js.value = "";
 			}
 
 			(async () => {
@@ -41,11 +56,8 @@ customElements.define(
 				this.debounce = null;
 
 				// Create sandbox
-				let logger = `<div class="sandbox-console-log" id="sandbox-console-log-${this.uuid}"></div>`;
-				this.innerHTML = `${
-					collapse && intro ? '<details class="margin-bottom">' : ""
-				}
-			${intro ? intro.innerHTML : ""}
+				let logger = `<pre class="sandbox-console-log language-shell" id="sandbox-console-log-${this.uuid}"></pre>`;
+				this.innerHTML = `
 			<div class="sandbox">
 				<div class="sandbox-header">
 					<strong class="sandbox-label">${
@@ -90,8 +102,7 @@ customElements.define(
 						  }><summary>Console</summary>${logger}</details>`
 						: ""
 				}
-			</div>
-			${collapse && intro ? "</details>" : ""}`;
+			</div>`;
 
 				// Get elements
 				this.htmlElem = this.querySelector(`#sandbox-html-${this.uuid}`);
@@ -201,6 +212,7 @@ customElements.define(
 				(key) => this[key] !== false && ["html", "css", "js"].includes(key)
 			);
 			const isSingleContentType = contentTypes.length === 1;
+
 			return `
 			<details ${
 				(elem && elem.hasAttribute("open")) || isSingleContentType ? "open" : ""
