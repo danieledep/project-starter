@@ -15,7 +15,10 @@ A starter template for projects that doesn't make you worry about maintaining de
 
 | Attribute | Description                                                                                                     |
 | --------- | --------------------------------------------------------------------------------------------------------------- |
+| `console`    | If present displays the console (Optional) |
+| `hidden`     | Used to prevent flashes of unstyled content      |
 | `name`    | The name attribute to be attached to the `<details>` elements, which makes only one open at the time (Optional) |
+| `result`     | Controls what is displayed on the right side panel, can either be `iframe` or `console`. Defaults to `iframe`     |
 | `src`     | The URL of the file to fetch and run in the sandbox. Can be on the same origin or a remote file (Optional)      |
 | `title`   | The title of the code block, defaults to `Code sandbox`. (Optional)                                             |
 
