@@ -16,7 +16,7 @@
 body {
 	color: light-dark(var(--gray-neutral-800), var(--gray-neutral-100));
 	background-color: light-dark(
-		var(--gray-neutral-100),
+		var(--gray-neutral-50),
 		var(--gray-neutral-900)
 	);
 }
