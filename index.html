@@ -1,60 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project starter</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project starter</title>
+		<!-- Reset CSS -->
+		<link href="css/reset.css" rel="stylesheet" />
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" />
+		<!-- Utils CSS -->
+		<link href="css/utils.css" rel="stylesheet" />
+		<!-- Code sandbox CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@danieledep/code-sandbox@1/src/code-sandbox.css"
+		/>
+		<!-- Markdown CSS -->
+		<link href="css/md-block.css" rel="stylesheet" />
+		<!-- Tailwind CDN Script -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- State management -->
+		<script type="module" src="js/state.js"></script>
+		<!-- Components -->
+		<script type="module" src="js/shiki.js"></script>
+		<script type="module" src="js/md-block.js"></script>
+		<script type="module" src="js/tweakpane.js"></script>
+		<script
+			type="module"
+			src="https://cdn.jsdelivr.net/npm/@danieledep/code-sandbox@1/src/code-sandbox.js"
+		></script>
+		<script type="module" src="js/counter-display.js"></script>
+		<script type="module" src="js/counter-button.js"></script>
+	</head>
 
-  <!-- Reset CSS -->
-  <link href="css/reset.css" rel="stylesheet">
-  <!-- Main CSS -->
-  <link href="css/main.css" rel="stylesheet">
-  <!-- Utils CSS -->
-  <link href="css/utils.css" rel="stylesheet">
-  <!-- Prism CSS -->
-  <link href="css/prism-one-dark.css" rel="stylesheet">
-  <!-- Code sandbox CSS -->
-  <link href="css/code-sandbox.css" rel="stylesheet">
-  <!-- Markdown CSS -->
-  <link href="css/md-block.css" rel="stylesheet">
-  <!-- Tailwind CDN Script -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- State management -->
-  <script type="module" src="js/state.js"></script>
-  <!-- Components -->
-  <script type="module" src="js/prism.js"></script>
-  <script type="module" src="js/md-block.js"></script>
-  <script type="module" src="js/tweakpane.js"></script>
-  <script type="module" src="js/code-sandbox.js"></script>
-  <script type="module" src="js/counter-display.js"></script>
-  <script type="module" src="js/counter-button.js"></script>
-</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<main
+			class="container flex flex-col items-center justify-center min-h-screen mx-auto"
+		>
+			<counter-display></counter-display>
+			<counter-button></counter-button>
 
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <main class="container flex flex-col items-center justify-center min-h-screen mx-auto">
-    <counter-display></counter-display>
-    <counter-button></counter-button>
+			<md-block src="md/demo.md"> `md/demo.md` was *not* found </md-block>
 
-    <md-block src="md/demo.md">
-      `md/demo.md` was *not* found
-    </md-block>
+			<md-block src="README.md"> `README.md` was *not* found </md-block>
 
-    <md-block src="README.md">
-      `README.md` was *not* found
-    </md-block>
+			<code-sandbox console hidden name="code-sandbox-1" title="Code sandbox 1">
+				<textarea for="html"><!-- ... --></textarea>
+				<textarea for="css" src="css/markdown.css">/* ... */</textarea>
+				<textarea for="js" open>// ...</textarea>
+			</code-sandbox>
 
-    <code-sandbox console hidden name="code-sandbox-1" title="Code sandbox 1">
-      <textarea for="html"><!-- ... --></textarea>
-      <textarea for="css" src="css/markdown.css">/* ... */</textarea>
-      <textarea for="js" open>// ...</textarea>
-    </code-sandbox>
-
-    <code-sandbox console hidden result="console">
-      <textarea for="js">// ...</textarea>
-    </code-sandbox>
-  </main>
-</body>
-
+			<code-sandbox console hidden result="console">
+				<textarea for="js">// ...</textarea>
+			</code-sandbox>
+		</main>
+	</body>
 </html>

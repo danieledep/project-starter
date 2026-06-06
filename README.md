@@ -5,22 +5,14 @@ A starter template for projects that doesn't make you worry about maintaining de
 ## Features
 
 - [Tweakpane](https://github.com/cocopon/tweakpane) for GUI controls
-- [PrismJS](https://prismjs.com/) for code highlighting
+- [Shiki](https://shiki.style/) for code highlighting (loaded from CDN)
 - [md-block](https://github.com/leaverou/md-block) for importing and rendering markdown files on the client side using web components
 - Basic custom Reactive State Management Using Proxy, storing values in Local storage and two-way data-binding with Tweakpane
 - Automatic light/dark mode based on system preferences
 - [Tailwind Play CDN](https://tailwindcss.com/docs/installation/play-cdn) for styling
 - Web components for modularity
-- A fork of [code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07) web component from Chris Ferdinandi for displaying an interactive code sandbox for html, css and javascript, similar to what CodePen does. My fork adds the possibility to fetch a file from a URL and run it in the sandbox, by just adding an attribute `src="css/component.css"` to the web component. My idea is to use this to keep the code snippets in a separate file and include them on page load. This way, the code snippets can be updated without changing the main page. I've also added a `name` attribute to the web component, which makes only one editor open at the time, leveraging the `<details>` element behavior. Below is a table of the new attributes.
-
-| Attribute | Description                                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| `console`    | If present displays the console (Optional) |
-| `hidden`     | Used to prevent flashes of unstyled content      |
-| `name`    | The name attribute to be attached to the `<details>` elements, which makes only one open at the time (Optional) |
-| `result`     | Controls what is displayed on the right side panel, can either be `iframe` or `console`. Defaults to `iframe`     |
-| `src`     | The URL of the file to fetch and run in the sandbox. Can be on the same origin or a remote file (Optional)      |
-| `title`   | The title of the code block, defaults to `Code sandbox`. (Optional)                                             |
+- A fork of [code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07) web component from Chris Ferdinandi for displaying an interactive code sandbox for html, css and javascript, similar to what CodePen does. My fork adds the possibility to fetch a file from a URL and run it in the sandbox, by just adding an attribute `src="css/component.css"` to the web component. 
+                                     
 
 ## Setup build tools
 
@@ -44,9 +36,11 @@ npx vite
 
 - [Tweakpane](https://github.com/cocopon/tweakpane)
 - [PrismJS](https://prismjs.com/)
+- [Shiki](https://shiki.style/)
 - [Tailwind Play CDN](https://tailwindcss.com/docs/installation/play-cdn)
 - [leaverou/md-block](https://github.com/leaverou/md-block)
 - [cferdinandi/code-sandbox](https://gist.github.com/cferdinandi/df9c95ae5f5ebcddf2ab85bb2805ff07)
+- [@danieledep/code-sandbox](https://www.npmjs.com/package/@danieledep/code-sandbox)
 - [@celine/celine](https://maxbo.me/celine/)
 - [MaxwellBo/celine](https://github.com/MaxwellBo/celine)
 - [mattdesl/canvas-sketch](https://github.com/mattdesl/canvas-sketch)
